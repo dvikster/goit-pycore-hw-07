@@ -115,11 +115,10 @@ def input_error(func):
 
 
 # Функції обробки команд
-
 def parse_input(user_input):
     cmd, *args = user_input.split()
     cmd = cmd.strip().lower()
-    return cmd, args  # повертаємо cmd і args без додаткового вкладення
+    return cmd, args
 
 @input_error
 def add_contact(args, book: AddressBook):
@@ -242,11 +241,6 @@ def main():
         else:
             print("Invalid command.")
 
-
-def parse_input(user_input):
-    cmd, *args = user_input.split()
-    cmd = cmd.strip().lower()
-    return cmd, args  # Повертаємо розділені аргументи як окремий список
 
 if __name__ == "__main__":
     main()
